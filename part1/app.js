@@ -4,8 +4,6 @@ var mysql = require('mysql2/promise');
 const app = express();
 app.use(express.json());
 
-
-
 let db;
 
 (async () => {
@@ -20,7 +18,7 @@ let db;
 
     console.log('Connected to database');
   } catch (err) {
-    console.error('Failed to connect to databse')
+    console.error('Failed to connect to databse:', err.message);
 
   })();
  module.exports = { app, db };
