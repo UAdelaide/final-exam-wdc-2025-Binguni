@@ -58,7 +58,7 @@ try {
         COUNT(WalkRequests.request_id) AS total_walks,
         SUM(WalkRequests.duration_minutes) AS total_minutes
         FROM WalkRequests
-        JOIN walker
+        JOIN Walkers ON WalkRequests.walker_id
 
 
 
