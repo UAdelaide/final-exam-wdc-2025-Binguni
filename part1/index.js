@@ -56,7 +56,8 @@ try {
         SELECT
         Walkers.name AS walker_name,
         COUNT(WalkRequests.request_id) AS total_walks,
-        SUM(Wa)
+        SUM(WalkRequests.duration_minutes) AS total_minutes
+        FROM WALK
 
 
 
