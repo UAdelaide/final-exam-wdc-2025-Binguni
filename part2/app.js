@@ -15,8 +15,8 @@ app.use(session({
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
-// modified route for login
+   // Routes
+     // modified route for login
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
@@ -30,7 +30,7 @@ app.post('/login', async (req, res) => {
         if (!user || user.password_hash !== password) {
             return res.status(401).json({ error: 'invalid suername or password' });
         }
-// save the userID and their role in the sesssion 
+   // save the userID and their role in the sesssion
         req.session.user = { id: user.user_id, role: user.role };
         res.json({ role: user.role });
     } catch (err) {
