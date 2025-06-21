@@ -1,21 +1,20 @@
+const { app, initDb, getDb } = require('./app');
+const PORT = 8080;
 
-const { app, initDb, getDb } = require(' ./app');
-const PORT= 8080;
+initDb().then(() => {
+  const db = getDb();
 
-initDb.then(() => {
-
-app.get( '/api/dogs', async (req, res) => {
+  app.get('/api/dogs', async (req, res) => {
     try {
-        const [rows]= await db.execute(`
-            SELECT Dogs.name, Dogs.size, Users.username AS owner
-            FROM Dogs
-            Join Users ON Dogs.owner_id = Users.user_id;
-            `);
-            res.json(rows);
-
+      const [rows] = await db.execute(`
+        SELECT Dogs.name, Dogs.size, Users.username AS owner
+        FROM Dogs
+        JOIN Users ON Dogs.owner_id = Users.user_id;
+      `);
+      res.json(rows);
     } catch (err) {
-      console.error('Error fetching dogs: ', err.message);
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+      console.error('Error fetching dogs:', err.message);
+      res.status(500).json({ error: 'Failed to fetch dogs' });
     }
   });
 
@@ -31,7 +30,7 @@ app.get( '/api/dogs', async (req, res) => {
         FROM WalkRequests
         JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
         JOIN Users ON Dogs.owner_id = Users.user_id
-        WHERE WalkRequests.status = 'open'
+        WHERE WalkRequests.status = 'open';
       `);
       res.json(rows);
     } catch (err) {
@@ -40,19 +39,8 @@ app.get( '/api/dogs', async (req, res) => {
     }
   });
 
-
-app.listen(PORT, () => {
+  app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+  });
 
 });
-
-
-
-
-
-
-
-
-
-
-
