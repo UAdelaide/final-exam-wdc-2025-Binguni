@@ -55,7 +55,8 @@ try {
     const [rows] = await db.execute (`
         SELECT
         Walkers.name AS walker_name,
-        COUNT(WalkRequests.req)
+        COUNT(WalkRequests.request_id) AS total_walks,
+        SUM(Wa)
 
 
 
