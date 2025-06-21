@@ -46,6 +46,7 @@ app.post('/logout', (req, res) => {
         if (err){
             return res.status(500).json({ error:
             }
+            res.clearCookie('connect.sid')
             })
         }
     })
