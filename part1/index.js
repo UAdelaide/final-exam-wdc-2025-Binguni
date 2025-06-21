@@ -1,4 +1,5 @@
 
+const { application } = require('express');
 const { app, db } = require('./app' );
 const PORT= 8080;
 
@@ -17,6 +18,24 @@ app.get( '/api/dogs', async (req, res) => {
     }
   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
