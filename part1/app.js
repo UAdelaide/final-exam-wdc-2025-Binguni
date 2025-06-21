@@ -1,6 +1,6 @@
 var express = require('express');
 const path= require ('path');
-const app = express ();
+
 
 app.use(express.static(path,join(__dirname, 'public')));
 var mysql = require('mysql2/promise');
