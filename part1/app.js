@@ -1,6 +1,8 @@
 var express = require('express');
 const path= reuire ('path');
+const app = express ();
 
+app.use(express.static)
 var mysql = require('mysql2/promise');
 
 const app = express();
