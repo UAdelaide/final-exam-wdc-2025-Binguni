@@ -17,14 +17,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
 
-
 app.post('/login', async (req, res) => {
     const {username, password } = req.body;
     try {
         const [users] = await db.query('SELECT * FROM Users WHERE username= ?'), [username]);
         req.session.user = { id: user.user_id, role: user.role};
         res.json({ role: user.role});
-})
+});
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
