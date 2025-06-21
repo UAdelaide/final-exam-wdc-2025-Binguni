@@ -16,8 +16,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
-const walkRoutes = require('./routes/walkRoutes');
-const userRoutes = require('./routes/userRoutes');
+
 
 app.post('/login', async (req, res) => {
     const {username, password } = req.body;
@@ -26,7 +25,8 @@ app.post('/login', async (req, res) => {
         req.session.user = { id: user.user_id, role: user.role};
         res.json({ role: user.role});
 })
-
+const walkRoutes = require('./routes/walkRoutes');
+const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
