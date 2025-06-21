@@ -14,7 +14,7 @@ let db;
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: '' // Set your MySQL root password
+      password: '',// Set your MySQL root password
       database: 'dogwalks'
     });
 
