@@ -48,11 +48,10 @@ app.post('/logout', (req, res) => {
             }
             res.clearCookie('connect.sid');
             res.sendStatus(200);
-        
-            })
-        }
-    })
-})
+
+            });
+        });
+
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
