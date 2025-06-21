@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <title>Dog of the Day</title>
-    
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
     <div id="app">
     <h1>Dog of the Day!</h1>
-    <button @click="fetchdog" >show dog</button>
-    <div v-if="dogurl">
+    <button @click="fetchDog" >show dog</button>
+    <div v-if="dogUrl">
         <img :src="dogUrl" alt="A random dog" width="300">
         </div>
         </div>
