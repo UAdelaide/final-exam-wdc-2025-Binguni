@@ -62,7 +62,8 @@ try {
         WHERE WalkRequests.status = 'complete'
         GROUP BY Walkers.walker_id;
 
-        `)
+        `);
+        
 }
 
 
