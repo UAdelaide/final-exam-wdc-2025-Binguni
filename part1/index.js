@@ -31,7 +31,8 @@ app.get( '/api/dogs', async (req, res) => {
             Dogs.name AS dog_name,
             Users.username AS owner
             From WalkRequests
-            JOIN Dogs ON WalkRequests.dog_id = D
+            JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+            JOIN Users ON Dogs.owner_id
             `);
             res.json(rows);
 
