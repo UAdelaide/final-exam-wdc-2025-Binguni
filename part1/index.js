@@ -22,7 +22,9 @@ app.get('/api/dogs', async (req, res) => {
 
   app.get('/api/walkrequests/open', async (req, res) => {
     const db= getDb();
-    if (!)
+    if (!db) {
+        return res.status(500).json()
+    }
     try {
       const [rows] = await db.execute(`
         SELECT
