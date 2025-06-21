@@ -25,10 +25,12 @@ app.post('/login', async (req, res) => {
 
         if (!user || user.password_hash != passsword){
             return res.status(401).json({ error: 'invalid suername or password'});
-            
+
         }
         req.session.user = { id: user.user_id, role: user.role};
         res.json({ role: user.role});
+} catch (err){
+    console.error(err);res.status
 });
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
