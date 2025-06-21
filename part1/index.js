@@ -18,25 +18,24 @@ app.get( '/api/dogs', async (req, res) => {
     }
   });
 
-  app.get( '/api/walkrequests/open', async (req, res) => {
+  app.get('/api/walkrequests/open', async (req, res) => {
     try {
-        const [rows]= await db.execute(`
-            SELECT
-            WalkRequests.requested_time,
-            WalkRequests.duration_minutes,
-            WalkRequests.location,
-            Dogs.name AS dog_name,
-            Users.username AS owner
-            From WalkRequests
-            JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-            JOIN Users ON Dogs.owner_id= Users.user_id
-            WHERE Walkrequests.status = 'open'
-            `);
-            res.json(rows);
-
+      const [rows] = await db.execute(`
+        SELECT
+          WalkRequests.requested_time,
+          WalkRequests.duration_minutes,
+          WalkRequests.location,
+          Dogs.name AS dog_name,
+          Users.username AS owner
+        FROM WalkRequests
+        JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+        JOIN Users ON Dogs.owner_id = Users.user_id
+        WHERE WalkRequests.status = 'open'
+      `);
+      res.json(rows);
     } catch (err) {
-      console.error('Error fetching walk requests: ', err.message);
-    res.status(500).json({ error: 'Failed to walk requests ' });
+      console.error('Error fetching walk requests:', err.message);
+      res.status(500).json({ error: 'Failed to fetch walk requests' });
     }
   });
 
