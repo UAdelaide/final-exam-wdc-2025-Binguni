@@ -2,8 +2,6 @@
 const { app, db } = require('./app' );
 const PORT= 8080;
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
 
 app.get( '/api/dogs', async (req, res) => {
     try {
@@ -22,6 +20,8 @@ app.get( '/api/dogs', async (req, res) => {
 
 })
 
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 
 
 
