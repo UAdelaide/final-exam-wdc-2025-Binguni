@@ -46,6 +46,8 @@
       methods: {
         async login() {
           try {
+
+            // sends post requests to the server 
             const res = await fetch('/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -58,7 +60,7 @@
             const data = await res.json();
             if (!res.ok) throw new Error(data.error);
 
-            // if the login is correct 
+            // if the login is correct , the user will be sent to their respective dashboard
 
             if (data.role === 'owner') {
               window.location.href = 'owner-dashboard.html';
