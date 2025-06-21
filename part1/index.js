@@ -46,7 +46,12 @@ app.get('/api/dogs', async (req, res) => {
     }
   });
 
-  app.get('/api/walkers/summary' , async (RedirectHandler, res ) =>)
+  app.get('/api/walkers/summary' , async (RedirectHandler, res ) =>){
+const db= getDb()
+
+
+
+  }
 
 
 
