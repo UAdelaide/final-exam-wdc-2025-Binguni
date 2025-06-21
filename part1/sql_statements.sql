@@ -1,3 +1,5 @@
+
+
 INSERT INTO Users (uername, email, password_hash, role)
 VALUES
   ('alice123', 'alice@example.com', 'hashed123', 'owner')
@@ -9,7 +11,7 @@ VALUES
   INSERT INTO Dogs (name, size, owner_id)
   VALUES
   ('Max', 'medium',
-  
+
 
 
 
