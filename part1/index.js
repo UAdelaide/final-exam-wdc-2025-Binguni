@@ -54,7 +54,8 @@ if (!db) {
 try {
     const [rows] = await db.execute (`
         SELECT
-       Users.username
+       Users.username AS walker_name,
+       COUNT(Walkrequests.request)
 
         `);
         res.json(rows);
