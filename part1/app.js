@@ -20,6 +20,6 @@ let db;
   } catch (err) {
     console.error('Failed to connect to database:', err.message);
   }
-})(); // ← This was missing a closing parenthesis!
+})(); //
 
 module.exports = { app, db };
