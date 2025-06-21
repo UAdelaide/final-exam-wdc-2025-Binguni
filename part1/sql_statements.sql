@@ -12,7 +12,7 @@ VALUES
   VALUES
   ('Max', 'medium',
 
-  (SELECT user_id FROM Users WHERE )
+  (SELECT user_id FROM Users WHERE username = 'alice123')),
 
 
 
