@@ -18,8 +18,8 @@ VALUES
      (SELECT user_id FROM Users WHERE username = 'alex2025')),
      ('Oscar', 'medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
-     ('Liam', 'medium',
-     (SELECT user_id FROM Users WHERE username = 'alice123')),
+     ('Liam', 'small',
+     (SELECT user_id FROM Users WHERE username = 'carol123')),
 
 
 
