@@ -1,4 +1,4 @@
-const { RedirectHandler } = require('undici-types');
+
 const { app, getDb } = require('./app');
 const PORT = 8080;
 
