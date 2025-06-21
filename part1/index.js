@@ -61,10 +61,6 @@ try {
         JOIN Walkers ON WalkRequests.walker_id= Walkers.walker_id
         WHERE WalkRequests.status = 'complete'
         GROUP BY Walkers.walker_id;
-        
-
-
-
 
         `)
 }
