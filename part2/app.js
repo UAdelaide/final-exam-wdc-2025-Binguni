@@ -1,4 +1,4 @@
-const express = require('express-session');
+const express = require('express');
 const path = require('path');
 const db = require(' ./models/db');
 require('dotenv').config();
