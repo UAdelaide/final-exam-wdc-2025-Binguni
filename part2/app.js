@@ -25,6 +25,8 @@ app.post('/login', async (req, res) => {
         const [rows] = await db.query('SELECT * FROM Users WHERE email = ?', [username]);
         const user = rows[0];
 
+        // an error message for if the user cant be found 
+
         if (!user || user.password_hash !== password) {
             return res.status(401).json({ error: 'invalid suername or password' });
         }
