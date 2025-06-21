@@ -13,25 +13,18 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
-    <div id="app" class="container py-5">
-    <h1 class="mb=4 text-primary'> {{ messsage }} </h1>
     <form @submit.prevent="login">
       <div class="mb-3">
         <label class="form-label">Username</label>
-        <input v-model=""Username" type=""text" class-="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Username</label>
-          <input v-model=""password" type=""text" class-="form-control" required>
+        <input v-model="username" type="text" class="form-control" required>
       </div>
-      <button type="submit" class="btn-primary">Log in</h1><button>
-        <div v-if="error" class=""alet mt-3">{{ error }}</div>
-
-
-    </h1>
-
-
-  </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input v-model="password" type="password" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Log In</button>
+      <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
+    </form>
   </div>
 
   <script>
@@ -46,31 +39,30 @@
         };
       },
       methods: {
-        async login(){
+        async login() {
           try {
-            const res = await fetch('/login'), {
+            const res = await fetch('/login', {
               method: 'POST',
-              header: { 'Content-Type': 'application/json' },
-              body: json.stringify({
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
                 username: this.username,
                 password: this.password
               })
+            });
 
-              });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error);
 
-              const data = await res.json();
-              if (!res.ok) throw new Error(data.error);
-               if(data.role == 'owner'){
-                window.location.href = 'owner-dashboard.html';
-               }else if (data.role == 'walker'{
-                window.location.href = 'walker-dashboard.html';
-
-               }
-               } catch (err) {
-                this.error = err.message;
-               }
+            if (data.role === 'owner') {
+              window.location.href = 'owner-dashboard.html';
+            } else if (data.role === 'walker') {
+              window.location.href = 'walker-dashboard.html';
             }
+          } catch (err) {
+            this.error = err.message;
           }
+        }
+      }
     }).mount('#app');
   </script>
 
