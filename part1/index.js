@@ -63,13 +63,14 @@ try {
         GROUP BY Walkers.walker_id;
 
         `);
-        
+        res.json(rows);
+    } catch (err) {
+      console.error('Error fetching walk requests:', err.message);
+      res.status(500).json({ error: 'Failed to fetch walk requests' });
+
 }
 
-
-
-
-  }
+  });
 
 
 
