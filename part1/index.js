@@ -58,7 +58,8 @@ try {
        COUNT(Walkrequests.request_id) AS total_completed_walks,
        AVG(WalkRatings.rating) AS average_rating
        FROM WalkApplications
-       JOIN Users on WalkApplications.walker_id= User
+       JOIN Users on WalkApplications.walker_id= Users.user_id
+       JOIN WalkRequests 
 
         `);
         res.json(rows);
