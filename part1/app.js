@@ -15,7 +15,7 @@ let db = null;
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: '', // Use your MySQL password here
+      password: '',
       database: 'DogWalkService'
     });
     console.log('Connected to database');
