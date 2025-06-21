@@ -20,6 +20,7 @@ let db;
 
     console.log('Connected to database');
   } catch (err) {
+    console
 
   })();
  module.exports = { app, db };
