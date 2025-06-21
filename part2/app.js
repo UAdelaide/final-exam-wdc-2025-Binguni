@@ -30,7 +30,8 @@ app.post('/login', async (req, res) => {
         req.session.user = { id: user.user_id, role: user.role};
         res.json({ role: user.role});
 } catch (err){
-    console.error(err);res.status(500.json({ error: 'inetrnal errror'}))
+    console.error(err);res.status(500.json({ error: 'inetrnal errror' }));
+}
 });
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
