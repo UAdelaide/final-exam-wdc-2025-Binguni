@@ -1,5 +1,6 @@
 const express = require('express-session');
 const path = require('path');
+const db = require
 require('dotenv').config();
 
 const app = express();
