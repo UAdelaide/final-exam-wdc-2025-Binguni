@@ -62,7 +62,11 @@
               window.location.href = 'owner-dashboard.html';
             } else if (data.role === 'walker') {
               window.location.href = 'walker-dashboard.html';
+
+
             }
+
+            // error message for if something goes wrong 
           } catch (err) {
             this.error = err.message;
           }
