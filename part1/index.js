@@ -15,7 +15,7 @@ app.get( '/api/dogs', async (Req, res) => {
             res.json(rows);
 
     } catch (err) {
-      console.err
+      console.error('Error fetching dogs: ')
     }
 
 })
