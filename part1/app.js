@@ -14,7 +14,7 @@ let db;
       host: 'localhost',
       user: 'root',
       password: ''
-      
+      database: 'dogwalks'
     });
 
     // Create the database if it doesn't exist
