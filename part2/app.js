@@ -1,6 +1,6 @@
 const express = require('express-session');
 const path = require('path');
-const db = require
+const db = require(' ./models/')
 require('dotenv').config();
 
 const app = express();
