@@ -24,7 +24,7 @@ app.get( '/api/dogs', async (req, res) => {
             SELECT
             WalkRequests.requested_time,
             WalkRequests.duration_minutes,
-            WallkRequests.location,
+            WalkRequests.location,
             Dogs.name AS dog_name,
             Users.username AS owner
             From WalkRequests
