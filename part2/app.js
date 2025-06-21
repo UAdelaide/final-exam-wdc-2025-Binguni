@@ -25,12 +25,12 @@ app.post('/login', async (req, res) => {
         const [rows] = await db.query('SELECT * FROM Users WHERE email = ?', [username]);
         const user = rows[0];
 
-        // an error message for if the username or passsword is wrong 
+        // an error message for if the username or passsword is wrong
 
         if (!user || user.password_hash !== password) {
             return res.status(401).json({ error: 'invalid suername or password' });
         }
-
+// save the userID and their role in the sesssion 
         req.session.user = { id: user.user_id, role: user.role };
         res.json({ role: user.role });
     } catch (err) {
