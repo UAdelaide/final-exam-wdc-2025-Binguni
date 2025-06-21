@@ -59,7 +59,7 @@ try {
        AVG(WalkRatings.rating) AS average_rating
        FROM WalkApplications
        JOIN Users on WalkApplications.walker_id= Users.user_id
-       JOIN WalkRequests 
+       JOIN WalkRequests ON WalkApplications.request_id= Walk
 
         `);
         res.json(rows);
