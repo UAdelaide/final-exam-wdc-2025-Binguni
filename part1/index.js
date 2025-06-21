@@ -52,7 +52,14 @@ if (!db) {
     return res.status(500).json({ error: 'Database not ready'});
 }
 try {
-    const [rows] = 
+    const [rows] = await db.execute (`
+        SELECT
+        Walkers.name
+
+
+
+
+        `)
 }
 
 
