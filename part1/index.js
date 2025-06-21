@@ -45,4 +45,3 @@ app.get('/api/dogs', async (req, res) => {
     console.log(`Server is running on http://localhost:${PORT}`);
   });
 
-});
