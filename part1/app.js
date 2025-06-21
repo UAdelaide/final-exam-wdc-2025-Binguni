@@ -22,7 +22,7 @@ let db;
   } catch (err) {
 
   })();
-  
+  module.exports = { app, db };
 
     // Create the database if it doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
