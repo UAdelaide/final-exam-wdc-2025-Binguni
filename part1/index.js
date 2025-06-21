@@ -55,7 +55,8 @@ try {
     const [rows] = await db.execute (`
         SELECT
        Users.username AS walker_name,
-       COUNT(Walkrequests.request)
+       COUNT(Walkrequests.request_id) AS total_completed_walks,
+       AVG
 
         `);
         res.json(rows);
