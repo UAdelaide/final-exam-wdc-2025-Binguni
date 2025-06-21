@@ -56,7 +56,8 @@ try {
         SELECT
        Users.username AS walker_name,
        COUNT(Walkrequests.request_id) AS total_completed_walks,
-       AVG
+       AVG(WalkRatings.rating) AS average_rating
+       FROM 
 
         `);
         res.json(rows);
