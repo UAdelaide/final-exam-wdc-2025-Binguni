@@ -32,7 +32,7 @@ VALUES
      ((select dog_id FROM Dogs WHERE name= 'Lando'),
      ' 2025-06-11 10:30:00', 60, 'Botanic Gardens', 'open'),
      ((select dog_id FROM Dogs WHERE name= 'Oscar'),
-     ' 2025-06-10 11:15:00', 30, 'North Terrace, 'cancelled'),
+     ' 2025-06-10 11:15:00', 30, 'North Terrace', 'cancelled'),
      ((select dog_id FROM Dogs WHERE name= 'Liam'),
      ' 2025-06-11 13:00:00', 25, 'Findon', 'completed');
 
