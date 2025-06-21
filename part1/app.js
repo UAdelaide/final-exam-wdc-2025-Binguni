@@ -1,9 +1,15 @@
 var express = require('express');
-
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 var mysql = require('mysql2/promise');
 
-const app = express();
+var app = express();
+
+app.use(logger('dev'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 let db;
 
@@ -13,8 +19,7 @@ let db;
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: ''
-      database: 'dogwalks'
+      password: '' // Set your MySQL root password
     });
 
     // Create the database if it doesn't exist
