@@ -18,6 +18,9 @@ async fucntion initDb() {
   } catch (err) {
     console.error('Failed to connect to database:', err.message);
   }
-})(); //
+}
+function getDb() {
+    
+}
 
 module.exports = { app, db };
