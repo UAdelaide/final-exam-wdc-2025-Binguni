@@ -18,7 +18,8 @@ let db;
       database: 'dogwalks'
     });
 
-    console.log('Connected to database')
+    console.log('Connected to database');
+  } catch (err)
 
     // Create the database if it doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
