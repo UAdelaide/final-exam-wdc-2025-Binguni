@@ -1,5 +1,5 @@
 const { RedirectHandler } = require('undici-types');
-const { app } = require('./app' );
+const { app, db } = require('./app' );
 const PORT= 8080;
 
 app.listen(PORT, () => {
@@ -7,7 +7,7 @@ app.listen(PORT, () => {
 
 app.get( '/api/dogs', async (Req, res) => {
     try {
-        
+        const [rows]= await db.execute()
     }
 
 })
