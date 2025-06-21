@@ -20,7 +20,7 @@ let db;
 
     console.log('Connected to database');
   } catch (err) {
-    console
+    console.error('Failed to connect to databse')
 
   })();
  module.exports = { app, db };
