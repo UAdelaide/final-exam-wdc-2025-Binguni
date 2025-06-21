@@ -51,7 +51,9 @@ const db= getDb();
 if (!db) {
     return res.status(500).json({ error: 'Database not ready'});
 }
-try
+try {
+    const [rows] = 
+}
 
 
 
