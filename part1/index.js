@@ -23,7 +23,7 @@ app.get('/api/dogs', async (req, res) => {
   app.get('/api/walkrequests/open', async (req, res) => {
     const db= getDb();
     if (!db) {
-        return res.status(500).json({ error: "Database not ready'"}
+        return res.status(500).json({ error: 'Database not ready'});
     }
     try {
       const [rows] = await db.execute(`
