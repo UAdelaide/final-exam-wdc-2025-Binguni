@@ -38,8 +38,8 @@ app.get( '/api/dogs', async (req, res) => {
             res.json(rows);
 
     } catch (err) {
-      console.error('Error fetching dogs: ', err.message);
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+      console.error('Error fetching walk requests: ', err.message);
+    res.status(500).json({ error: 'Failed to walk requests ' });
     }
   });
 
