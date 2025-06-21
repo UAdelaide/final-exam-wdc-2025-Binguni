@@ -18,7 +18,7 @@ let db= null;
   } catch (err) {
     console.error('Failed to connect to database:', err.message);
   }
-}
+})();
 function getDb() {
     return db;
 }
