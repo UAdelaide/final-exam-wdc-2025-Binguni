@@ -24,7 +24,7 @@ app.post('/login', async (req, res) => {
         const user = rows[0];
 
         if (!user || user.password_hash != passsword){
-            return res.status
+            return res.status(401).json({ error: 'invalid suername or password'})
         }
         req.session.user = { id: user.user_id, role: user.role};
         res.json({ role: user.role});
