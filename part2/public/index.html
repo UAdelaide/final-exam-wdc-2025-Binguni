@@ -58,6 +58,8 @@
             const data = await res.json();
             if (!res.ok) throw new Error(data.error);
 
+            // if the login is correct 
+
             if (data.role === 'owner') {
               window.location.href = 'owner-dashboard.html';
             } else if (data.role === 'walker') {
@@ -66,7 +68,7 @@
 
             }
 
-            // error message for if something goes wrong 
+            // error message for if something goes wrong
           } catch (err) {
             this.error = err.message;
           }
