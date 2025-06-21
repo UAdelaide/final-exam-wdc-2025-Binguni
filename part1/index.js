@@ -7,7 +7,8 @@ app.listen(PORT, () => {
 
 app.get( '/api/dogs', async (Req, res) => {
     try {
-        const [rows]= await db.execute()
+        const [rows]= await db.execute(`
+            `)
     }
 
 })
