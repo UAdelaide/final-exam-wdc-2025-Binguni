@@ -4,7 +4,7 @@ var mysql = require('mysql2/promise');
 const app = express();
 let db= null;
 
-async fucntion initDb() {
+async function initDb() {
   try {
     // Connect to MySQL database
     db = await mysql.createConnection({
@@ -23,4 +23,4 @@ function getDb() {
     return db;
 }
 
-module.exports = { app, initdDb };
+module.exports = { app, initdDb, getDb };
