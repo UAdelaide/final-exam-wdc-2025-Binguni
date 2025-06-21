@@ -10,11 +10,11 @@ VALUES
 
   INSERT INTO Dogs (name, size, owner_id)
   VALUES
-    ('Max', 'medium',
+    ('Max','medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
-     ('Bella', 'small',
+     ('Bella','small',
      (SELECT user_id FROM Users WHERE username = 'carol123')),
-     ('Lando', 'large',
+     ('Lando', large',
      (SELECT user_id FROM Users WHERE username = 'alex2025')),
      ('Oscar', 'medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
