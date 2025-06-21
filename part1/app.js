@@ -20,7 +20,7 @@ async fucntion initDb() {
   }
 }
 function getDb() {
-    
+    return db;
 }
 
 module.exports = { app, db };
