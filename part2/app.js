@@ -23,7 +23,7 @@ app.post('/login', async (req, res) => {
         const [rows] = await db.query('SELECT * FROM Users WHERE username= ?'), [username]);
         const user = rows[0];
 
-        if (1)
+        if (!user || user.password_hash)
         req.session.user = { id: user.user_id, role: user.role};
         res.json({ role: user.role});
 });
