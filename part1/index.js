@@ -65,8 +65,8 @@ try {
         `);
         res.json(rows);
     } catch (err) {
-      console.error('Error fetching walk requests:', err.message);
-      res.status(500).json({ error: 'Failed to fetch walk requests' });
+      console.error('Error fetching walk summary:', err.message);
+      res.status(500).json({ error: 'Failed to fetch walker summary' });
 }
   });
 
