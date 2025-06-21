@@ -1,3 +1,4 @@
+const { RedirectHandler } = require('undici-types');
 const { app, getDb } = require('./app');
 const PORT = 8080;
 
@@ -45,7 +46,7 @@ app.get('/api/dogs', async (req, res) => {
     }
   });
 
-  app.get('/api/walkers/summary')
+  app.get('/api/walkers/summary' , async (RedirectHandler, res ) =>)
 
 
 
