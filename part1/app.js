@@ -13,7 +13,7 @@ let db;
       host: 'localhost',
       user: 'root',
       password: '', // Set your MySQL root password
-      database: 'DogWalk'
+      database: 'DogWalkService'
     });
 
     console.log('Connected to database');
