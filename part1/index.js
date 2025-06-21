@@ -3,6 +3,7 @@ const PORT = 8080;
 
 app.get('/api/dogs', async (req, res) => {
   const db = getDb();
+  if (!db)
 
   app.get('/api/dogs', async (req, res) => {
     try {
