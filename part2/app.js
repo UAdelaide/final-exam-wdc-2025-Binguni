@@ -19,7 +19,10 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 app.post('/login', async (req, res) => {
-    const {username, password } = req.body
+    const {username, password } = req.body;
+    try {
+        const [users]
+    }
 })
 
 app.use('/api/walks', walkRoutes);
