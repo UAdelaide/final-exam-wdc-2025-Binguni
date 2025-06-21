@@ -1,5 +1,5 @@
 
-const { app, initDb } = require('express');
+const { app, initDb, getDb } = require(' ./app');
 const { app, db } = require('./app' );
 const PORT= 8080;
 
