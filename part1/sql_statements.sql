@@ -30,7 +30,7 @@ VALUES
      ((select dog_id FROM Dogs WHERE name= 'Bella')
      ' 2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
      ((select dog_id FROM Dogs WHERE name= 'Lando')
-     ' 2025-06-10 08:00:00', 30, 'Patklands', 'open'),
+     ' 2025-06-11 10:30:00', 30, 'Patklands', 'open'),
      ((select dog_id FROM Dogs WHERE name= 'Max')
      ' 2025-06-10 08:00:00', 30, 'Patklands', 'open'),
      ((select dog_id FROM Dogs WHERE name= 'Max')
