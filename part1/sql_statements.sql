@@ -15,10 +15,10 @@ VALUES
      ('Bella', 'small',
      (SELECT user_id FROM Users WHERE username = 'carol123')),
      ('Lando', 'large',
+     (SELECT user_id FROM Users WHERE username = 'alex2025')),
+     ('Oscar', 'medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
-     ('Max', 'medium',
-     (SELECT user_id FROM Users WHERE username = 'alice123')),
-     ('Max', 'medium',
+     ('Liam', 'medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
 
 
