@@ -45,7 +45,7 @@ app.get('/api/dogs', async (req, res) => {
     }
   });
 
-  app.get
+  app.get('/api/walkers/summary')
 
 
 
