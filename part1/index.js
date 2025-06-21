@@ -46,7 +46,7 @@ app.get('/api/dogs', async (req, res) => {
     }
   });
 
-  app.get('/api/walkers/summary' , async (RedirectHandler, res ) =>){
+  app.get('/api/walkers/summary' , async (req, res ) =>{
 const db= getDb();
 if (!db) {
     return res.status(500).json({ error: 'Database not ready'});
