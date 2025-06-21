@@ -12,9 +12,9 @@ VALUES
   VALUES
     ('Max', 'medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
-     ('bella', 'small',
+     ('Bella', 'small',
      (SELECT user_id FROM Users WHERE username = 'carol123')),
-     ('', 'medium',
+     ('Lando', 'large',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
      ('Max', 'medium',
      (SELECT user_id FROM Users WHERE username = 'alice123')),
