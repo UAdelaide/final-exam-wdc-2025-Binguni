@@ -9,8 +9,8 @@ const app = express();
 app.use(session({
     secret: 'walkdogsecret',
     resave: false,
-    saveUni
-}))
+    saveUninitialized: true
+}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
