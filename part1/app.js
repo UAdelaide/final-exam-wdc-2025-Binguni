@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql2/promise');
 
 const app = express();
-app.user(express.json());
+app.use(express.json());
 
 
 
@@ -24,4 +24,3 @@ let db;
   })();
   module.exports = { app, db };
 
-   
