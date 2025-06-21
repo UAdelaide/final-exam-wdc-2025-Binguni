@@ -19,7 +19,10 @@ let db;
     });
 
     console.log('Connected to database');
-  } catch (err)
+  } catch (err) {
+
+  })();
+  
 
     // Create the database if it doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
