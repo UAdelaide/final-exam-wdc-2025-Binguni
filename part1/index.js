@@ -8,7 +8,9 @@ app.listen(PORT, () => {
 app.get( '/api/dogs', async (Req, res) => {
     try {
         const [rows]= await db.execute(`
-            SELECT Dogs.name, Dogs.size, Users.username AS owner`)
+            SELECT Dogs.name, Dogs.size, Users.username AS owner
+            FROM Dogs
+            Join Users ON Dogs`)
     }
 
 })
