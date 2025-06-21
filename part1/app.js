@@ -2,7 +2,7 @@ var express = require('express');
 
 var mysql = require('mysql2/promise');
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
