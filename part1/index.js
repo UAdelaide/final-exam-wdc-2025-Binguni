@@ -54,13 +54,7 @@ if (!db) {
 try {
     const [rows] = await db.execute (`
         SELECT
-        Walkers.name AS walker_name,
-        COUNT(WalkRequests.request_id) AS total_walks,
-        SUM(WalkRequests.duration_minutes) AS total_minutes
-        FROM WalkRequests
-        JOIN Walkers ON WalkRequests.walker_id= Walkers.walker_id
-        WHERE WalkRequests.status = 'complete'
-        GROUP BY Walkers.walker_id;
+       Users.username
 
         `);
         res.json(rows);
