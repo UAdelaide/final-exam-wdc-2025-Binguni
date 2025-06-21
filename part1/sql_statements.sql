@@ -12,6 +12,8 @@ VALUES
   VALUES
   ('Max', 'medium',
 
+  (SELECT user_id FROM Users WHERE )
+
 
 
 
