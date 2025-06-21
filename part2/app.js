@@ -6,6 +6,9 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
+app.use(session({
+    secret: 'walk'
+}))
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
