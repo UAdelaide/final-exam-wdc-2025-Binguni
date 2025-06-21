@@ -2,7 +2,7 @@
 const { app, initDb, getDb } = require(' ./app');
 const PORT= 8080;
 
-initDb
+initDb.then()
 
 app.get( '/api/dogs', async (req, res) => {
     try {
