@@ -4,9 +4,9 @@ const PORT = 8080;
 app.get('/api/dogs', async (req, res) => {
   const db = getDb();
   if (!db) {
-    return res.status(500).json({ error: 'Database not ready;' })
+    return res.status(500).json({ error: 'Database not ready;' });
+  }
 
-  app.get('/api/dogs', async (req, res) => {
     try {
       const [rows] = await db.execute(`
         SELECT Dogs.name, Dogs.size, Users.username AS owner
