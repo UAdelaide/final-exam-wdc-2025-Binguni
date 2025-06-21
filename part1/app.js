@@ -22,5 +22,5 @@ let db;
   } catch (err) {
 
   })();
-  module.exports = { app, db };
+ module.exports = { app, db };
 
