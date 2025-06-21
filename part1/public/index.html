@@ -11,7 +11,7 @@
     <h1>Dog of the Day!</h1>
     <button type=button @click="fetchDog" >show dog</button>
     <div v-if="dogUrl">
-        <img :src="dogUrl" alt="A random dog" width="300">
+        <img v-bind:src="dogUrl" alt="A random dog" width="300">
         </div>
         </div>
 
