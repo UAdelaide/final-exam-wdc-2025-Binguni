@@ -9,7 +9,7 @@
 <body>
     <div id="app">
     <h1>Dog of the Day!</h1>
-    <button @click="fetchDog" >show dog</button>
+    <button type=button @click="fetchDog" >show dog</button>
     <div v-if="dogUrl">
         <img :src="dogUrl" alt="A random dog" width="300">
         </div>
