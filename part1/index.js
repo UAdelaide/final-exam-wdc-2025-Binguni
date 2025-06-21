@@ -59,7 +59,9 @@ try {
         SUM(WalkRequests.duration_minutes) AS total_minutes
         FROM WalkRequests
         JOIN Walkers ON WalkRequests.walker_id= Walkers.walker_id
-        WHERE WalkRequests.status = 'comple
+        WHERE WalkRequests.status = 'complete'
+        GROUP BY Walkers.walker_id;
+        
 
 
 
