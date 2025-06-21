@@ -1,4 +1,4 @@
-const { app, initDb, getDb } = require('./app');
+const { app, getDb } = require('./app');
 const PORT = 8080;
 
 initDb().then(() => {
