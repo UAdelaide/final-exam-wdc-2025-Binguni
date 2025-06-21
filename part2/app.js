@@ -42,17 +42,14 @@ app.post('/login', async (req, res) => {
 
 
 app.post('/logout', (req, res) => {
-    req.session.destroy(err => {
-        if (err){
-            return res.status(500).json({ error:'logout failed'});
-            }
-            res.clearCookie('connect.sid');
-            res.sendStatus(200);
-
-            });
-        });
-
-
+    req.session.destroy((err) => {
+      if (err) {
+        return res.status(500).json({ error: 'logout_failed' });
+      }
+      res.clearCookie('connect.sid');
+      res.sendStatus(200);
+    });
+  });
 
 
 const walkRoutes = require('./routes/walkRoutes');
