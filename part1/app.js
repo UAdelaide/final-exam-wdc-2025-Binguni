@@ -2,9 +2,7 @@ var express = require('express');
 var mysql = require('mysql2/promise');
 
 const app = express();
-
-
-let db;
+let db= null;
 
 (async () => {
   try {
