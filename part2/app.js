@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
-        const [rows] = await db.query('SELECT * FROM Users WHERE username = ?', [username]);
+        const [rows] = await db.query('SELECT * FROM Users WHERE email = ?', [username]);
         const user = rows[0];
 
         if (!user || user.password_hash != passsword) {
