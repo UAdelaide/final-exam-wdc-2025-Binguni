@@ -38,6 +38,10 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ error: 'inetrnal errror' });
     }
 });
+
+
+
+app.post('/')
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
