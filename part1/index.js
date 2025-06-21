@@ -64,8 +64,7 @@ try {
        WHERE WalkRequests.status = 'completed'
        AND Users.role = 'walker'
        GROUP BY Users.user_id;
-
-        `);
+`);
         res.json(rows);
     } catch (err) {
       console.error('Error fetching walk summary:', err.message);
