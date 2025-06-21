@@ -62,7 +62,8 @@ try {
        JOIN WalkRequests ON WalkApplications.request_id= WalRequests.request_id
        LEFT JOIN WalkRatings ON WalkRequests.request_id = WalkRatings.request_id
        WHERE WalkRequests.status = 'completed'
-       AND Users
+       AND Users.role = 'walker'
+       GROUP BY Users.user_id;
 
         `);
         res.json(rows);
