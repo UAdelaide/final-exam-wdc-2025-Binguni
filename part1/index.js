@@ -59,7 +59,7 @@ try {
        AVG(WalkRatings.rating) AS average_rating
        FROM WalkApplications
        JOIN Users on WalkApplications.walker_id= Users.user_id
-       JOIN WalkRequests ON WalkApplications.request_id= WalRequests.request_id
+       JOIN WalkRequests ON WalkApplications.request_id= WalkRequests.request_id
        LEFT JOIN WalkRatings ON WalkRequests.request_id = WalkRatings.request_id
        WHERE WalkRequests.status = 'completed'
        AND Users.role = 'walker'
