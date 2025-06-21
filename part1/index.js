@@ -11,8 +11,10 @@ app.get( '/api/dogs', async (Req, res) => {
             SELECT Dogs.name, Dogs.size, Users.username AS owner
             FROM Dogs
             Join Users ON Dogs.owner_id = users.user_id;
-            `)
-    }
+            `);
+            res.json(rows);
+
+    } catch
 
 })
 
