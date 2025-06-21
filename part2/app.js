@@ -23,7 +23,7 @@ app.post('/login', async (req, res) => {
     try {
         const [users] = await db.query('SELECT * FROM Users WHERE username= ?'), [username]);
         req.session.user = { id: user.user_id, role: user.role};
-        res.json({})
+        res.json({ role: user.role});
     }
 })
 
