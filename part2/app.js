@@ -18,20 +18,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 
 app.post('/login', async (req, res) => {
-    const {username, password } = req.body;
+    const { username, password } = req.body;
     try {
-        const [rows] = await db.query('SELECT * FROM Users WHERE username= ?'), [username]);
+        const [rows] = await db.query('SELECT * FROM Users WHERE username = ?', [username]);
         const user = rows[0];
 
-        if (!user || user.password_hash != passsword){
-            return res.status(401).json({ error: 'invalid suername or password'});
-
+        if (!user || user.password_hash != passsword) {
+            return res.status(401).json({ error: 'invalid suername or password' });
         }
-        req.session.user = { id: user.user_id, role: user.role};
-        res.json({ role: user.role});
-    }  catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'inetrnal errror' });
+
+        req.session.user = { id: user.user_id, role: user.role };
+        res.json({ role: user.role });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'inetrnal errror' });
     }
 });
 const walkRoutes = require('./routes/walkRoutes');
