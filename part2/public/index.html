@@ -35,7 +35,7 @@
   <script>
     const { createApp } = Vue;
 
-    // modified to handle the login request and redirect based on the users login role
+
     createApp({
       data() {
         return {
@@ -49,7 +49,7 @@
         async login() {
           try {
 
-            // sends post requests to the server with the username and password
+
             const res = await fetch('/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -62,7 +62,7 @@
             const data = await res.json();
             if (!res.ok) throw new Error(data.error);
 
-            // if the login is correct , the user will be sent to their respective dashboard
+
 
             if (data.role === 'owner') {
               window.location.href = 'owner-dashboard.html';
@@ -72,7 +72,7 @@
 
             }
 
-            
+
           } catch (err) {
             this.error = err.message;
           }
