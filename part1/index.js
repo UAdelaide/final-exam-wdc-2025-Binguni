@@ -5,7 +5,7 @@ const PORT= 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 
-app.get( '/api/dogs', async (Req, res) => {
+app.get( '/api/dogs', async (req, res) => {
     try {
         const [rows]= await db.execute(`
             SELECT Dogs.name, Dogs.size, Users.username AS owner
