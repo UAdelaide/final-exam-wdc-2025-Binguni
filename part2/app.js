@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
+// modified route for login 
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
