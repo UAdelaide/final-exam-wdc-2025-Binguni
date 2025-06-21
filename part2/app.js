@@ -21,7 +21,7 @@ const userRoutes = require('./routes/userRoutes');
 app.post('/login', async (req, res) => {
     const {username, password } = req.body;
     try {
-        const [users] = await db.query('SELECT *')
+        const [users] = await db.query('SELECT * FROM Users WHERE username= ?'), [username])
     }
 })
 
