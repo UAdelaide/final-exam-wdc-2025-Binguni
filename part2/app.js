@@ -32,7 +32,7 @@ app.post('/login', async (req, res) => {
      }  catch (err){
     console.error(err);
     res.status(500).json({ error: 'inetrnal errror' });
-}
+ }
 });
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
