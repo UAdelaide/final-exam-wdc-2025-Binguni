@@ -26,7 +26,10 @@ app.get( '/api/dogs', async (req, res) => {
         const [rows]= await db.execute(`
             SELECT
             WalkRequests.requested_time,
-            WalkRequests.duration
+            WalkRequests.duration_minutes,
+            WallkRequests.location,
+            Dogs.name AS dog_name,
+            Users.
             `);
             res.json(rows);
 
