@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     try {
-        // check for the user in the databse with their usernam 
+        // check for the user in the databse with their usernam
         const [rows] = await db.query('SELECT * FROM Users WHERE email = ?', [username]);
         const user = rows[0];
 
