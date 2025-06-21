@@ -2,12 +2,9 @@ var express = require('express');
 var mysql = require('mysql2/promise');
 
 const app = express();
-app.user
+app.user(express.json());
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 
 let db;
 
