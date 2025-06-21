@@ -1,7 +1,8 @@
 
 const { app, initDb, getDb } = require(' ./app');
-const { app, db } = require('./app' );
 const PORT= 8080;
+
+initDb
 
 app.get( '/api/dogs', async (req, res) => {
     try {
