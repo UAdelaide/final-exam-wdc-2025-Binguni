@@ -29,7 +29,9 @@ app.get( '/api/dogs', async (req, res) => {
             WalkRequests.duration_minutes,
             WallkRequests.location,
             Dogs.name AS dog_name,
-            Users.
+            Users.username AS owner
+            From WalkRequests
+            JOIN Dogs ON 
             `);
             res.json(rows);
 
